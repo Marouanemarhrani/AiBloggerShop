@@ -1,0 +1,62 @@
+/* Admin Orders Page */
+#admin-orders-container {
+    padding: 2rem;
+}
+
+#admin-orders-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.admin-order-card {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.admin-order-table {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.admin-order-status-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+#admin-order-products-container {
+    padding: 1rem;
+}
+
+.admin-product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.admin-product-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    #admin-orders-container {
+        padding: 1rem;
+    }
+
+    #admin-orders-title {
+        font-size: 1.75rem;
+    }
+
+    .admin-product-img {
+        width: 80px;
+        height: 80px;
+    }
+}

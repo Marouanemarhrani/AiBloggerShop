@@ -1,0 +1,808 @@
+.home.banner {
+  background-color: #b0c4de; /* Light blue background */
+  color: black; /* Black text color */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding for spacing */
+  font-family: Arial, sans-serif; /* Font similar to the one in the image */
+  position: relative;
+}
+
+.home1.banner-text {
+  font-size: 16px; /* Adjust font size for readability */
+  font-weight: 500; /* Medium font weight */
+  text-align: center; /* Center the text */
+}
+
+.banner-link {
+  color: black; /* Black link color */
+  text-decoration: underline; /* Underline the link */
+  margin-left: 5px; /* Slight spacing between text and link */
+}
+
+.banner-link:hover {
+  text-decoration: underline; /* Keep underline on hover */
+}
+
+.home2.banner-close {
+  font-size: 20px; /* Larger close button */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: absolute; /* Position the close button */
+  right: 10px; /* Align it to the right */
+  top: 50%; /* Center it vertically */
+  transform: translateY(-50%); /* Adjust for vertical alignment */
+}
+
+.home2.banner-close:hover {
+  color: #888; /* Change color on hover for effect */
+}
+
+/* Main container for the carousel, controlling size and positioning */
+.home24.carousel-container {
+  width: 100%;            
+  height: auto;           
+  min-height: 500px;      
+  position: relative;     
+}
+
+/* Styling for each slide in the carousel */
+.home24 .carousel .slide img {
+  width: 100%;            
+  height: auto;           
+  object-fit: cover;      
+}
+
+/* Custom navigation buttons */
+.home24 .carousel .control-arrow {
+  background-color: rgba(26, 26, 26, 0.6); /* Slightly more transparent black background */
+  border-radius: 50%; /* Maintain circular shape */
+  width: 30px; /* Further reduced width for a minimal look */
+  height: 30px; /* Match height to the reduced width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Ensure centering */
+  z-index: 5;
+  opacity: 0.8; /* Make arrows slightly visible */
+}
+
+.home24 .carousel .control-arrow:hover {
+  background-color: #000000; /* Solid black on hover */
+  opacity: 1; /* Fully visible when hovered */
+}
+
+/* Position the previous button on the left */
+.home24 .carousel .control-prev.control-arrow {
+  left: 5px; /* Adjust closer to the edge for minimal overlap */
+}
+
+
+/* Position the next button on the right */
+.home24 .carousel .control-next.control-arrow {
+  right: 5px; /* Adjust closer to the edge to maintain balance */
+}
+
+/* Adjust button visibility and size for smaller screens */
+@media (max-width: 768px) {
+  .home24 .carousel .control-arrow {
+    width: 12px; /* Smaller on mobile devices for even less intrusion */
+    height: 12px;
+    opacity: 0.8; /* Slightly visible to ensure they can still be interacted with */
+  }
+}
+
+
+/* Legend content positioning */
+.home25, .home27, .home29, .home31 {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  z-index: 2;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home25, .home27, .home29, .home31 {
+    bottom: 15%;
+    left: 5%;
+  }
+  .home24.carousel-container {
+    min-height: 300px; /* Smaller height for carousel on mobile */
+  }
+
+  .home24 .carousel .slide img {
+    min-height: 300px; /* Smaller images in carousel on mobile */
+  }
+
+  /* Ensure single column layout for promotional images on smaller screens */
+  .home28-banner, .home30-banner, .home71-banner, .home72-banner {
+    flex: 0 0 100%; /* Full width for each */
+  }
+
+  /* Video adjustments for smaller screens */
+  .video-banner, .home33-banner-video {
+    width: 100%; /* Full width for video containers */
+    height: auto; /* Adjust height automatically */
+  }
+}
+
+/* Filter Headings */
+.home5, .home7 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #343a40;
+  padding-bottom: 5px;
+  text-align: center;
+  width: auto;
+}
+
+/* Centering the Product Section */
+.home11 {
+  margin: 20px auto;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  width: 80%; /* Adjust width for centering */
+}
+
+/* Product Heading and Subheading */
+.home12 h5 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #212529;
+  margin-bottom: 5px;
+}
+
+.home12 h10 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #6c757d;
+  margin-top: 0;
+}
+
+/* Products Layout */
+.home13 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center; /* Center the grid items horizontally */
+  justify-items: center; /* Ensure individual grid items are centered */
+}
+
+/* Individual Product Card */
+.home14 {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home14:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.home15 {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.home16 {
+  padding: 15px;
+}
+
+/* Ensure product name and description are one line */
+.home17 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #4c4a4a;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+.home18 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+/* Adjust buttons layout */
+.home-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure buttons are aligned in the middle */
+  margin-top: 15px;
+  flex-wrap: nowrap; /* Ensure buttons stay in a single line */
+}
+
+.home19 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.home20,
+.home21 {
+  width: 48%;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+}
+
+.home20 {
+  background-color: #ffffff;
+  border-color:#272727 ;
+  color: rgb(0, 0, 0);
+  margin-right: 4%;
+}
+
+.home20:hover {
+  background-color: #272727;
+  border-color:#272727 ;
+  color:#ffffff; 
+}
+
+.home21 {
+  background-color: #ffffff;
+  border-color:#272727 ;
+  color: rgb(0, 0, 0);
+  margin-right: 4%;
+}
+
+.home21:hover {
+  background-color: #28a745;
+  border-color:#28a745 ;
+  color:#ffffff; 
+}
+
+.home22 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.home23 {
+  background-color: #f1f3f5;
+  color: #333;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  width: auto;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.home23:hover {
+  background-color: #e2e6ea;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Bestsellers Section */
+.home37.bestsellers-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff; /* Pure white background */
+  border-radius: 12px;
+  max-width: 1200px; /* Max width for large screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home38.bestseller-title {
+  font-weight: 700;
+  font-size: 1.8rem; /* Larger title for emphasis */
+  color: #333333; /* Darker color for readability */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.home39.bestseller-subtitle {
+  font-weight: 400;
+  font-size: 1.1rem; /* Visible subtitle size */
+  color: #555555; /* Darker subtitle for contrast */
+  margin-bottom: 25px; /* Spacing below subtitle */
+  text-align: center;
+}
+
+/* Carousel Wrapper */
+.home40.bestseller-carousel-wrapper {
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+  width: 100%;
+}
+
+/* Bestsellers Carousel */
+.home40.bestseller-carousel {
+  display: flex;
+  overflow-x: auto; /* Horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  -webkit-overflow-scrolling: touch; /* Scrolling on touch devices */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  padding-bottom: 10px; /* Bottom padding for arrows */
+}
+
+.home40.bestseller-carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, Opera */
+}
+
+/* Bestseller Card */
+.home41.bestseller-card {
+  background-color: #fafafa; /* Light gray background */
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  padding: 15px;
+  width: 300px; /* Fixed width on large screens */
+  height: 400px; /* Fixed height */
+  box-sizing: border-box;
+  margin: 0 15px; /* Side margins */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.home41.bestseller-card:hover {
+  box-shadow: 5px 5px 5px 5px rgba(104, 104, 104, 0.1); /* Deeper shadow on hover */
+}
+
+/* Bestseller Image */
+.home42.bestseller-image {
+  width: 100%;
+  height: 160px; /* Fixed height */
+  object-fit: cover; /* Cover the entire area */
+  margin-bottom: 15px;
+}
+
+/* Bestseller Details */
+.home43.bestseller-details {
+  padding: 10px;
+}
+
+.home44.bestseller-name {
+  font-size: 1.1rem; /* Font size for product names */
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333333; /* Darker text color */
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.home45.bestseller-price {
+  font-size: 1rem; /* Font size for price */
+  font-weight: 700;
+  color: #28a745; /* Positive green color */
+  margin-bottom: 10px;
+}
+
+.home46.bestseller-rating {
+  font-size: 0.9rem; /* Rating font size */
+  color: #ffc107; /* Bright yellow for ratings */
+  margin-bottom: 15px;
+}
+
+.home47.btn {
+  width: 100%;
+  padding: 12px 0; /* Padding for larger button */
+  font-size: 1rem; /* Button text size */
+  font-weight: 600;
+  border-radius: 8px; /* Rounded corners */
+  text-align: center;
+  border-color: #272727;
+  background-color: #ffffff; /* Blue button background */
+  color: #272727;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions on hover */
+}
+
+.home47.btn:hover {
+  color: white;
+  background-color: #272727; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  /* Adjustments for smaller screens */
+  .home41.bestseller-card {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height for better flexibility */
+    margin: 0 10px; /* Smaller side margins */
+    padding: 10px; /* Smaller padding */
+  }
+
+  .home42.bestseller-image {
+    height: 200px; /* Taller image for better visibility on small screens */
+  }
+
+  .home38.bestseller-title, .home39.bestseller-subtitle {
+    font-size: 1.5rem; /* Smaller font sizes for titles and subtitles */
+    margin-bottom: 5px; /* Less bottom margin */
+  }
+
+  .home39.bestseller-subtitle {
+    font-size: 1rem; /* Smaller subtitle font size */
+  }
+}
+
+/* Custom Navigation Arrows */
+.carousel-arrow {
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  width: 40px; /* Slightly larger arrows for better usability */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px; /* Larger arrow icons */
+  cursor: pointer;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.carousel-arrow-left {
+  left: 15px; /* Increased distance from the edge */
+}
+
+.carousel-arrow-right {
+  right: 15px; /* Increased distance from the edge */
+}
+
+.carousel-arrow:hover {
+  background-color: #000000; /* Darker on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .home41.bestseller-card {
+    min-width: 45%; /* Show two items at a time on smaller screens */
+  }
+
+  .home42.bestseller-image {
+    height: 140px; /* Adjust image height for smaller screens */
+  }
+
+  .home47.btn {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .carousel-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home41.bestseller-card {
+    min-width: 90%; /* Show one item at a time on mobile devices */
+  }
+
+  .home42.bestseller-image {
+    height: 130px; /* Smaller image height for mobile devices */
+  }
+
+  .carousel-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .home38.bestseller-title {
+    font-size: 1.5rem; /* Smaller title for mobile devices */
+  }
+
+  .home39.bestseller-subtitle {
+    font-size: 1rem; /* Smaller subtitle for mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .home41.bestseller-card {
+    min-width: 100%; /* Full width for very small screens */
+  }
+
+  .home42.bestseller-image {
+    height: 120px; /* Smallest image height */
+  }
+
+  .home47.btn {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
+
+
+/* Container for the Apple Products section */
+.home50 {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: auto;
+}
+
+/* Title and subtitle styling */
+.home51 h5 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home51 h10 { /* Note: <h10> is not a valid HTML element, consider using a different tag like <p> or <div> */
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Card container */
+.home52 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Centers cards and maintains space between them */
+  gap: 20px; /* Ensures even spacing around each card */
+}
+
+/* Card styling */
+.home53.card {
+  width: 18rem; /* Fixed width for all cards */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px; /* Rounded corners for the card */
+  overflow: hidden; /* Hides anything that goes outside the bounds of the card */
+  transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
+}
+
+.home53.card:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Image styling */
+.home54card-img-top {
+  width: 100%;
+  height: 180px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures the image covers the area nicely */
+}
+
+/* Product name styling below the image */
+.home37.company-name {
+  font-size: 18px;
+  color: #333;
+  padding: 10px 15px;
+  text-align: center; /* Center the text */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds '...' if text is too long */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home53.card {
+    width: 90%; /* Full width on smaller screens */
+  }
+
+  .home52 {
+    justify-content: center; /* Ensure cards are centered on smaller screens */
+  }
+}
+
+/* General container styling */
+.home61 {
+  max-width: 100%; /* Adjust the width as necessary */
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Styling for the heading */
+.home36 h5 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Banner section styling for images */
+.home27-banner-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Individual banner image containers */
+.home28-banner, .home30-banner, .home71-banner, .home72-banner {
+  flex: 0 0 24%; /* Each takes exactly 24% of the container width */
+  padding: 5px; /* Padding for some space around the images */
+  box-sizing: border-box;
+}
+
+/* Banner images */
+.home29-banner-image, .home31-banner-image, .home74-banner-image, .home73-banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px; /* Rounded corners for images */
+}
+
+/* Video section styling */
+.home70-banner-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Space between image and video sections */
+}
+
+/* Video containers */
+.video-banner {
+  flex: 0 0 49%; /* Each video takes almost half of the container */
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Video elements */
+.home33-banner-video {
+  width: 100%;
+  display:block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home28-banner, .home30-banner, .home71-banner, .home72-banner, .video-banner {
+    flex: 0 0 100%; /* Full width on smaller screens */
+  }
+}
+
+
+/* Container for filter, image, and title, centered with margin */
+.filter-image-section {
+  display: flex;
+  justify-content: center; /* Center content */
+  align-items: center; /* Vertically center content */
+  flex-direction: column; /* Stack title, image, and filters vertically */
+  margin: 30px auto; /* Add margin to top and bottom */
+  width: 90%; /* Control the width of the entire section */
+  max-width: 1200px; /* Limit the maximum width */
+}
+
+/* Title styling */
+.filter-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px; /* Spacing below the title */
+  text-align: center;
+}
+
+/* Inner container for image and filters */
+.inner-content {
+  display: flex;
+  justify-content: space-between; /* Space between image and filters */
+  align-items: center;
+  width: 100%;
+}
+
+/* Image container */
+.image-container {
+  flex: 1;
+  text-align: left; /* Align image to the left */
+  padding-right: 20px; /* Space between image and filters */
+}
+
+.image-container img {
+  width: 85%; /* Adjust size of the image */
+}
+
+/* Filter container */
+.home4 {
+  flex: 0 0 300px; /* Set the filter to a fixed width */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Button Styling */
+.home101 {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-color: #272727;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px; /* Add space between the buttons */
+  background-color: #ffffff;
+  color: #272727;
+}
+
+.home101.btn:hover {
+  background-color: #272727;
+  border-color: #272727;
+  color: #ffffff;
+}
+
+/* Reset Button Styling */
+.home10.btn {
+  background-color: #ffffff;
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.home10.btn:hover {
+  background-color: #c82333;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+
+/* Category, Brand, and Price Filter Container */
+.home6, .home100, .home8 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+/* Ensure consistent alignment for checkboxes */
+.home6 .ant-checkbox-wrapper,
+.home100 .ant-checkbox-wrapper,
+.home8 .ant-radio-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .filter-image-section {
+    width: 100%;
+  }
+
+  .inner-content {
+    flex-direction: column;
+  }
+
+  .image-container {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .home4 {
+    width: 90%;
+  }
+
+  .home101, .home100 {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

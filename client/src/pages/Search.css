@@ -1,0 +1,201 @@
+/* Centering the Product Section */
+.divsrch1 {
+  margin: 20px auto;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  width: 80%; /* Adjust width for centering */
+}
+
+@media (max-width: 768px) {
+  .divsrch1 {
+    width: 90%; /* Increase width to fit smaller screens */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .divsrch1 {
+    width: 100%; /* Full width for very small screens */
+  }
+}
+
+/* Product Heading and Subheading */
+.divsrch2 h5 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #212529;
+  margin-bottom: 5px;
+  text-align: center; /* Center text */
+}
+
+.divsrch2 h6 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #6c757d;
+  margin-top: 0;
+  text-align: center; /* Center text */
+}
+
+/* Products Layout */
+.divsrch3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center; /* Center the grid items horizontally */
+  justify-items: center; /* Ensure individual grid items are centered */
+}
+
+@media (max-width: 768px) {
+  .divsrch3 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .divsrch3 {
+    grid-template-columns: 1fr; /* Single column layout on very small screens */
+  }
+}
+
+/* Individual Product Card */
+.srchpdct14 {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.srchpdct14:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.srchpdct15 {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .srchpdct15 {
+    height: 150px; /* Reduce image height for very small screens */
+  }
+}
+
+.srchpdct16 {
+  padding: 15px;
+}
+
+@media (max-width: 480px) {
+  .srchpdct16 {
+    padding: 10px; /* Reduce padding for very small screens */
+  }
+}
+
+/* Ensure product name and description are one line */
+.srchpdct17 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #4c4a4a;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+@media (max-width: 480px) {
+  .srchpdct17 {
+    font-size: 1rem; /* Reduce font size for very small screens */
+  }
+}
+
+.srchpdct18 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+@media (max-width: 480px) {
+  .srchpdct18 {
+    font-size: 0.8rem; /* Reduce font size for very small screens */
+  }
+}
+
+/* Adjust buttons layout */
+.srchpdct-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure buttons are aligned in the middle */
+  margin-top: 15px;
+  flex-wrap: nowrap; /* Ensure buttons stay in a single line */
+}
+
+@media (max-width: 768px) {
+  .srchpdct-buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    align-items: stretch; /* Make buttons full width */
+  }
+}
+
+.srchpdct19 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.srchpdct20,
+.srchpdct21 {
+  width: 48%;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+}
+
+.srchpdct20 {
+  background-color: #ffffff;
+  border-color: #272727;
+  color: #272727;
+  margin-right: 4%;
+}
+
+.srchpdct20:hover {
+  background-color: #272727;
+  color: #ffffff;
+  border-color: #272727;
+}
+
+.srchpdct21 {
+  background-color: #ffffff;
+  border-color: #272727;
+  color: #272727;
+}
+
+.srchpdct21:hover {
+  background-color: #28a745;
+  color: #ffffff;
+  border-color: #28a745;
+}
+
+@media (max-width: 768px) {
+  .srchpdct20,
+  .srchpdct21 {
+    width: 100%; /* Full width buttons on smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .srchpdct20 {
+    margin-right: 0; /* Remove margin on smaller screens */
+  }
+}

@@ -1,0 +1,155 @@
+/* Main container */
+.pdcts.container-fluid {
+    padding: 20px;
+  }
+  
+  /* AdminMenu and Product List Layout */
+  .pdcts1.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  
+  .pdcts2 {
+    margin-bottom: 20px;
+  }
+  
+  .pdcts3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header */
+  .pdcts4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Product list container */
+  .pdcts5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Individual product card */
+  .pdcts6.product-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .pdcts7.card {
+    width: 300px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Space between cards */
+  }
+  
+  .pdcts7.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Product image */
+  .pdcts8.card-img-top {
+    width: 100%;
+    height: 220px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Card body */
+  .pdcts9.card-body {
+    padding: 15px;
+    height: 180px; /* Fixed height for the body */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .pdcts10.card-title {
+    font-size: 18px;
+    margin-bottom: 5px; /* Reduced margin for closer spacing */
+    color: #333;
+  }
+  
+  .pdcts11.card-text {
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 10px; /* Added margin for spacing */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .pdcts.container-fluid {
+      padding: 15px;
+    }
+  
+    .pdcts4 {
+      font-size: 24px;
+    }
+  
+    .pdcts7.card {
+      width: 100%;
+      max-width: 300px; /* Ensures consistency on smaller screens */
+      height: 350px; /* Adjust height for smaller screens */
+    }
+  
+    .pdcts8.card-img-top {
+      height: 180px; /* Adjust image height */
+    }
+  
+    .pdcts9.card-body {
+      height: 170px; /* Adjust body height */
+    }
+  
+    .pdcts10.card-title {
+      font-size: 16px;
+    }
+  
+    .pdcts11.card-text {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pdcts.container-fluid {
+      padding: 10px;
+    }
+  
+    .pdcts4 {
+      font-size: 20px;
+    }
+  
+    .pdcts7.card {
+      width: 100%;
+      max-width: 300px;
+      height: 320px; /* Further adjust height for smaller screens */
+    }
+  
+    .pdcts8.card-img-top {
+      height: 160px; /* Further adjust image height */
+    }
+  
+    .pdcts9.card-body {
+      height: 160px; /* Further adjust body height */
+    }
+  
+    .pdcts10.card-title {
+      font-size: 14px;
+    }
+  
+    .pdcts11.card-text {
+      font-size: 12px;
+    }
+  }
+  

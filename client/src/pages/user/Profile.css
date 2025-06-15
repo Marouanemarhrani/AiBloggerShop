@@ -1,0 +1,128 @@
+/* Profile container */
+.profuser {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Profile inner row */
+.profuser1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0; /* Ensure no additional margin */
+}
+
+/* User menu column */
+.profuser2 {
+    margin-bottom: 20px;
+}
+
+/* Profile form column */
+.profuser3 {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Form container */
+.profuser4 {
+    background-color: #fff;
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for the card */
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Form title */
+.profuser5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Dark grey text color */
+}
+
+/* Form input fields */
+.profuser6, .profuser8, .profuser10, .profuser12, .profuser14, .profuser16 {
+    margin-bottom: 15px;
+}
+
+.profuser7, .profuser9, .profuser11, .profuser13, .profuser15, .profuser17 {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Light grey border */
+    font-size: 16px;
+    color: #333; /* Dark text color */
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+.profuser7:focus, .profuser9:focus, .profuser11:focus, .profuser13:focus, .profuser15:focus, .profuser17:focus {
+    border-color: #414141; /* Bootstrap primary color for focus */
+    background-color: #fff;
+}
+
+/* Update button */
+.profuser18 {
+    background-color: #ffffff; /* Bootstrap primary blue */
+    color: #000000;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: 1px solid #28a745;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profuser18:hover {
+    background-color: #047c2c;
+    border: 1px solid #047c2c;
+    color: #ffffff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profuser {
+        padding: 15px;
+    }
+
+    .profuser1 {
+        flex-direction: column;
+    }
+
+    .profuser2, .profuser3 {
+        width: 100%;
+    }
+
+    .profuser4 {
+        padding: 15px;
+    }
+
+    .profuser5 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profuser {
+        padding: 10px;
+    }
+
+    .profuser4 {
+        padding: 10px;
+    }
+
+    .profuser5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .profuser18 {
+        padding: 10px 15px;
+    }
+}

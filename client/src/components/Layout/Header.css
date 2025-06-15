@@ -1,0 +1,173 @@
+/* General navbar settings for responsiveness */
+.header1 {
+  background-color: #ffffff; /* Keeping the background color light */
+  padding: 10px 15px; /* Adding padding for better spacing */
+}
+
+.header2 {
+  display: flex;
+  justify-content: space-between; /* Ensures spacing between logo and other elements */
+  align-items: center; /* Vertically aligns items */
+}
+
+.header3 {
+  border: none; /* Remove border from navbar toggler */
+  padding: 5px 10px; /* Adjust padding for better appearance */
+}
+
+/* Custom size and spacing for navbar toggler icon */
+.header4 {
+  width: 24px; /* Smaller width for icon */
+  height: 24px; /* Smaller height for icon */
+}
+
+.header5 {
+  justify-content: space-between; /* Distribute space between the elements inside the collapse */
+}
+
+.header6 {
+  font-size: 1.5rem; /* Larger font size for branding */
+  font-weight: bold; /* Make the branding bold */
+  text-transform: uppercase; /* Transform the text to uppercase */
+}
+
+.header7 {
+  display: flex;
+  gap: 15px; /* Space between nav items */
+}
+
+/* Dropdown menu settings */
+.header8, .header13 {
+  position: relative; /* Ensure dropdown stays aligned with nav items */
+}
+
+.header10, .header15 {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for dropdown */
+  z-index: 1000;
+  min-width: 200px;
+  padding: 0;
+}
+
+/* Show dropdown on hover */
+.header8:hover .header10, .header13:hover .header15 {
+  display: block; /* Show dropdown when hovering over Services or Categories */
+}
+
+/* Dropdown item styles */
+.header11, .header12, .header16, .header17 {
+  padding: 10px 20px;
+  color: #606060;
+  text-decoration: none;
+  display: block;
+}
+
+.header11:hover, .header12:hover, .header16:hover, .header17:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  color: #000000; /* Text color change on hover */
+}
+
+/* Styling for the search input */
+.header18 {
+  flex-grow: 1; /* Ensures search bar expands to fill space */
+  padding: 0 15px; /* Adds padding to separate search bar */
+}
+
+/* Right-aligned navigation items */
+.header19 {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between right-side items */
+  margin-right: 30px; /* Move the icons to the right */
+  justify-content: flex-end; /* Ensure the icons are right-aligned */
+}
+
+/* Register/Login links */
+.header20 .header21, .header22 .header23 {
+  font-size: 0.9rem; /* Slightly smaller font size for links */
+  padding: 8px 12px; /* Padding for links */
+}
+
+.header24 .header25 {
+  font-size: 1.5rem; /* Larger icon for user profile */
+  position: relative; /* Ensure the dropdown aligns correctly */
+  color: #606060 !important;
+  display: flex;
+}
+
+.header24 .header25:hover {
+  color: #000000 !important;
+}
+.header26 {
+  right: 0; /* Align the dropdown to the right edge of the container */
+  left: auto; /* Prevent it from overflowing to the left */
+  transform: translateX(-50%); /* Adjust position so it doesn't overflow */
+  padding: 10px 0; /* Padding for dropdown items */
+}
+
+/* Cart icon styling */
+.header29 .header30 {
+  font-size: 1.2rem; /* Slightly larger cart icon */
+  position: relative; /* Position to allow badge adjustment */
+  color: #606060 !important;
+}
+
+.header29 .header30:hover {
+  color: #000000 !important;
+}
+
+.header29 .ant-badge-count {
+  top: 9px; /* Adjust badge position closer to the icon */
+  right: 9px; /* Adjust badge position closer to the icon */
+}
+
+.navbar-logo {
+  height: 65px; /* Set the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .header2 {
+    flex-direction: column; /* Stack logo and nav items vertically on smaller screens */
+  }
+
+  .header5 {
+    margin-top: 10px; /* Add margin between logo and nav items */
+  }
+
+  .header18 {
+    flex-grow: unset; /* Prevent search bar from expanding too much */
+    width: 100%; /* Make search bar full width */
+    margin-bottom: 10px; /* Add space below search bar */
+  }
+
+  .header19 {
+    justify-content: center; /* Center right-side items on smaller screens */
+    margin-right: 0; /* Remove the margin on smaller screens */
+  }
+}
+
+/* Additional adjustments for smaller devices */
+@media (max-width: 576px) {
+  .header6 {
+    font-size: 1.2rem; /* Reduce font size for branding */
+  }
+
+  .header7 {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 10px; /* Reduce gap between items */
+  }
+
+  .header20 .header21, .header22 .header23 {
+    padding: 6px 10px; /* Adjust padding for smaller screen links */
+  }
+
+  .header29 .header30 {
+    font-size: 1rem; /* Reduce cart icon size */
+  }
+}

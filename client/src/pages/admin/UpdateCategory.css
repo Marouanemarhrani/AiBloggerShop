@@ -1,0 +1,153 @@
+/* Main container */
+.upcate.container-fluid {
+    padding: 20px;
+  }
+  
+  /* AdminMenu and Update Category Layout */
+  .upcate1.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  
+  .upcate2 {
+    margin-bottom: 20px;
+  }
+  
+  .upcate3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header */
+  .upcate3 h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* General form input styles */
+  .upcate14.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #404040;
+    box-shadow: 0 0 5px rgba(86, 88, 90, 0.5);
+    outline: none;
+  }
+  
+  /* File upload button */
+  .upcate7.btn-outline {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Image preview */
+  .upcate10.img-responsive,
+  .upcate12.img-responsive {
+    width: 250px;  /* Ensure the width is consistent */
+    height: 250px; /* Ensure the height is consistent */
+    object-fit: cover; /* This ensures the image is cropped to fit the container */
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  /* Update Category Button */
+  .upcate21.btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #28a745;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upcate21.btn:hover {
+    background-color: #047c2c;
+    border: 1px solid #047c2c;
+    color: #ffffff;
+  }
+  
+  /* Delete Category Button */
+  .upcate23.btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #f80000;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upcate23.btn:hover {
+    background-color: #c82333;
+    border: 1px solid #c82333;
+    color: #ffffff;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .upcate.container-fluid {
+        padding: 15px;
+    }
+  
+    .upcate3 h1 {
+        font-size: 24px;
+    }
+  
+    .upcate14.form-control,
+    .upcate7.btn-outline,
+    .upcate21.btn,
+    .upcate23.btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+  
+    /* Responsive image adjustment */
+    .upcate10.img-responsive,
+    .upcate12.img-responsive {
+        width: 200px;  /* Adjust the width */
+        height: 200px; /* Adjust the height */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .upcate.container-fluid {
+        padding: 10px;
+    }
+  
+    .upcate3 h1 {
+        font-size: 20px;
+    }
+  
+    .upcate14.form-control,
+    .upcate7.btn-outline,
+    .upcate21.btn,
+    .upcate23.btn {
+        font-size: 12px;
+        padding: 6px;
+    }
+  
+    /* Further responsive image adjustment */
+    .upcate10.img-responsive,
+    .upcate12.img-responsive {
+        width: 180px;  /* Further adjust width */
+        height: 180px; /* Further adjust height */
+    }
+  }
+  

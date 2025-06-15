@@ -1,0 +1,179 @@
+/* Main container */
+.updct.container-fluid {
+  padding: 20px;
+}
+
+/* AdminMenu and Product Form Layout */
+.updct1.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.updct2 {
+  margin-bottom: 20px;
+}
+
+.updct3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.updct3 h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* General form input styles */
+.updct14.form-control,
+.updct16.form-control,
+.updct18.form-control,
+.updct19.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #404040;
+  box-shadow: 0 0 5px rgba(86, 88, 90, 0.5);
+  outline: none;
+}
+
+/* File upload button */
+.updct7.btn-outline {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Image preview */
+.updct10.img-responsive,
+.updct12.img-responsive {
+  width: 250px;  /* Ensure the width is consistent */
+  height: 250px; /* Ensure the height is consistent */
+  object-fit: cover; /* This ensures the image is cropped to fit the container */
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Update Product Button */
+.updct21.btn {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #28a745;
+  width: 100%;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.updct21.btn:hover {
+  background-color: #047c2c;
+  border: 1px solid #047c2c;
+  color: #ffffff;
+}
+
+/* Delete Product Button */
+.updct23.btn {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #f80000;
+  width: 100%;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.updct23.btn:hover {
+  background-color: #c82333;
+  border: 1px solid #c82333;
+  color: #ffffff;
+}
+
+/* Adjustments for Select component */
+.updct5.form-select {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.updct5.form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .updct.container-fluid {
+      padding: 15px;
+  }
+
+  .updct3 h1 {
+      font-size: 24px;
+  }
+
+  .updct14.form-control,
+  .updct16.form-control,
+  .updct18.form-control,
+  .updct19.form-control,
+  .updct5.form-select,
+  .updct7.btn-outline,
+  .updct21.btn,
+  .updct23.btn {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  /* Responsive image adjustment */
+  .updct10.img-responsive,
+  .updct12.img-responsive {
+      width: 200px;  /* Adjust the width */
+      height: 200px; /* Adjust the height */
+  }
+}
+
+@media (max-width: 480px) {
+  .updct.container-fluid {
+      padding: 10px;
+  }
+
+  .updct3 h1 {
+      font-size: 20px;
+  }
+
+  .updct14.form-control,
+  .updct16.form-control,
+  .updct18.form-control,
+  .updct19.form-control,
+  .updct5.form-select,
+  .updct7.btn-outline,
+  .updct21.btn,
+  .updct23.btn {
+      font-size: 12px;
+      padding: 6px;
+  }
+
+  /* Further responsive image adjustment */
+  .updct10.img-responsive,
+  .updct12.img-responsive {
+      width: 180px;  /* Further adjust width */
+      height: 180px; /* Further adjust height */
+  }
+}

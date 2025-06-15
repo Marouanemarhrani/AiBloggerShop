@@ -1,0 +1,180 @@
+/* Main container */
+.upcmp.container-fluid {
+    padding: 20px;
+  }
+  
+  /* AdminMenu and Product Form Layout */
+  .upcmp1.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  
+  .upcmp2 {
+    margin-bottom: 20px;
+  }
+  
+  .upcmp3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header */
+  .upcmp3 h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* General form input styles */
+  .upcmp14.form-control,
+  .upcmp16.form-control,
+  .upcmp18.form-control,
+  .upcmp19.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #404040;
+    box-shadow: 0 0 5px rgba(86, 88, 90, 0.5);
+    outline: none;
+  }
+  
+  /* File upload button */
+  .upcmp7.btn-outline {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Image preview */
+  .upcmp10.img-responsive,
+  .upcmp12.img-responsive {
+    width: 250px;  /* Ensure the width is consistent */
+    height: 250px; /* Ensure the height is consistent */
+    object-fit: cover; /* This ensures the image is cropped to fit the container */
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  /* Update Product Button */
+  .upcmp21.btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #28a745;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upcmp21.btn:hover {
+    background-color: #047c2c;
+    border: 1px solid #047c2c;
+    color: #ffffff;
+  }
+  
+  /* Delete Product Button */
+  .upcmp23.btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #f80000;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upcmp23.btn:hover {
+    background-color: #c82333;
+    border: 1px solid #c82333;
+    color: #ffffff;
+  }
+  
+  /* Adjustments for Select component */
+  .upcmp5.form-select {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .upcmp5.form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .upcmp.container-fluid {
+        padding: 15px;
+    }
+  
+    .upcmp3 h1 {
+        font-size: 24px;
+    }
+  
+    .upcmp14.form-control,
+    .upcmp16.form-control,
+    .upcmp18.form-control,
+    .upcmp19.form-control,
+    .upcmp5.form-select,
+    .upcmp7.btn-outline,
+    .upcmp21.btn,
+    .upcmp23.btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+  
+    /* Responsive image adjustment */
+    .upcmp10.img-responsive,
+    .upcmp12.img-responsive {
+        width: 200px;  /* Adjust the width */
+        height: 200px; /* Adjust the height */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .upcmp.container-fluid {
+        padding: 10px;
+    }
+  
+    .upcmp3 h1 {
+        font-size: 20px;
+    }
+  
+    .upcmp14.form-control,
+    .upcmp16.form-control,
+    .upcmp18.form-control,
+    .upcmp19.form-control,
+    .upcmp5.form-select,
+    .upcmp7.btn-outline,
+    .upcmp21.btn,
+    .upcmp23.btn {
+        font-size: 12px;
+        padding: 6px;
+    }
+  
+    /* Further responsive image adjustment */
+    .upcmp10.img-responsive,
+    .upcmp12.img-responsive {
+        width: 180px;  /* Further adjust width */
+        height: 180px; /* Further adjust height */
+    }
+  }
+  

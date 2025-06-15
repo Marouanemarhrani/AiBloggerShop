@@ -1,0 +1,64 @@
+/* General navbar settings for responsiveness */
+.headerLogin1 {
+  background-color: #ffffff; /* White background for a clean look */
+  padding: 10px 20px; /* Padding around the navbar */
+}
+
+.headerLogin2 {
+  display: flex;
+  justify-content: center; /* Center the logo in the middle */
+  align-items: center; /* Vertically aligns items */
+}
+
+/* Navbar brand/logo */
+.headerLogin6 {
+  font-size: 1.5rem; /* Size of the brand text */
+  font-weight: bold; /* Bold logo text (if used) */
+  text-transform: uppercase; /* Uppercase branding */
+}
+
+.headerlogin-navbar-logo {
+  height: 65px; /* Default height for the logo */
+  width: auto; /* Maintain the logo aspect ratio */
+  transition: height 0.3s ease; /* Smooth transition for resizing */
+  display: block; /* Ensure logo remains visible */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .headerLogin2 {
+    justify-content: center; /* Keep the logo centered on smaller screens */
+  }
+
+  .headerlogin-navbar-logo {
+    height: 55px; /* Smaller height for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .headerLogin2 {
+    padding: 5px 15px; /* Adjust padding for medium screens */
+  }
+
+  .headerlogin-navbar-logo {
+    height: 45px; /* Smaller height for smaller screens */
+  }
+
+  .headerLogin6 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .headerLogin2 {
+    padding: 5px 10px; /* Reduce padding further on very small screens */
+  }
+
+  .headerlogin-navbar-logo {
+    height: 35px; /* Even smaller height for mobile */
+  }
+
+  .headerLogin6 {
+    font-size: 1rem; /* Smaller font for mobile devices */
+  }
+}

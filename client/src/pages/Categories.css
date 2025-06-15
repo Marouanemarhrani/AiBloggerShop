@@ -1,0 +1,105 @@
+/* Body Styling */
+.ctg1 {
+    padding: 20px;
+    background-color: #f9fafb;
+}
+
+/* Title Styling */
+.ctg1 h1 {
+    font-size: 2.5rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Container for Categories */
+.ctg2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Categories Grid Layout */
+.ctg3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Individual Category Card */
+.ctg4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px;  /* Set a fixed height for the card */
+    justify-content: space-between; /* Space out the image and button */
+}
+
+.ctg4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Container */
+.ctg5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Category Image */
+.ctg6 {
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    border-radius: 8px;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+/* Category Link/Button */
+.ctg7 {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-color: #333333;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.ctg7:hover {
+    background-color: #3d3d3d;
+    background-color: #3d3d3d;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .ctg4 {
+        flex: 0 0 48%; /* Two cards per row */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ctg4 {
+        flex: 0 0 100%; /* One card per row */
+        margin-bottom: 20px;
+    }
+
+    .ctg7 {
+        width: 100%; /* Full width button on mobile */
+    }
+}

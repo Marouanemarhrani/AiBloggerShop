@@ -1,0 +1,196 @@
+/* Centering the Product Section */
+.catpdct {
+    margin: 20px auto;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    width: 90%; /* Adjust width for centering */
+  }
+  
+  /* Product Heading and Subheading */
+  .catcpdct14 h5 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #212529;
+    margin-bottom: 5px;
+    text-align: center; /* Center text */
+  }
+  
+  .catcpdct14 h6 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #6c757d;
+    margin-top: 0;
+    text-align: center; /* Center text */
+  }
+  
+  /* Products Layout */
+  .catpdct5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Center the grid items horizontally */
+    justify-items: center; /* Ensure individual grid items are centered */
+  }
+  
+  /* Individual Product Card */
+  .catpdct6 {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .catpdct6:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .catpdct7 {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .catpdct8 {
+    padding: 15px;
+  }
+  
+  /* Ensure product name and description are one line */
+  .catpdct9 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #4c4a4a;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+  }
+  
+  .catpdct10 {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+  }
+  
+  /* Adjust buttons layout */
+  .catpdct-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure buttons are aligned in the middle */
+    margin-top: 15px;
+    flex-wrap: nowrap; /* Ensure buttons stay in a single line */
+  }
+  
+  .catpdct11 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #28a745;
+    margin-bottom: 15px;
+  }
+  
+  .catpdct12,
+  .catpdct13 {
+    width: 48%;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+  }
+  
+  .catpdct12 {
+    background-color: #ffffff;
+    color: #272727;
+    border-color: #272727;
+    margin-right: 4%;
+  }
+  
+  .catpdct12:hover {
+    background-color: #272727;
+    color: #ffffff;
+    border-color: #272727;
+  }
+  
+  .catpdct13 {
+    background-color: #ffffff;
+    color: #272727;
+    border-color: #272727;
+  }
+  
+  .catpdct13:hover {
+    background-color: #28a745;
+    color: #ffffff;
+    border-color: #28a745;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .catpdct {
+      width: 100%; /* Adjust to full width for smaller screens */
+      padding: 10px;
+    }
+  
+    .catpdct5 {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller grid columns for smaller screens */
+      gap: 15px;
+    }
+  
+    .catpdct6 {
+      margin: 0 auto;
+      width: 100%; /* Full width cards on smaller screens */
+    }
+  
+    .catpdct9 {
+      font-size: 1.1rem; /* Slightly smaller font size for smaller screens */
+    }
+  
+    .catpdct10 {
+      font-size: 0.85rem; /* Slightly smaller font size for smaller screens */
+    }
+  
+    .catpdct-buttons {
+      flex-direction: column; /* Stack buttons vertically on smaller screens */
+      align-items: stretch; /* Full width buttons */
+    }
+  
+    .catpdct12,
+    .catpdct13 {
+      width: 100%; /* Full width buttons on smaller screens */
+      margin-bottom: 10px;
+    }
+  
+    .catpdct12 {
+      margin-right: 0; /* Remove margin on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .catpdct5 {
+      grid-template-columns: 1fr; /* Single column layout on very small screens */
+    }
+  
+    .catpdct7 {
+      height: 150px; /* Adjust image height for very small screens */
+    }
+  
+    .catpdct8 {
+      padding: 10px; /* Reduce padding for very small screens */
+    }
+  
+    .catpdct9 {
+      font-size: 1rem; /* Further reduce font size for very small screens */
+    }
+  
+    .catpdct10 {
+      font-size: 0.8rem; /* Further reduce font size for very small screens */
+    }
+  }
+  

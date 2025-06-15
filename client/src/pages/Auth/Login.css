@@ -1,0 +1,138 @@
+.bodylogin {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Adjust the form position */
+.login {
+    background-color: #f8f9fa; /* White background with transparency */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 80px auto 0; /* Adjust margin to account for header height */
+    text-align: center;
+}
+
+/* Form title */
+.login h1 {
+    color: #333; /* Dark text color */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Input fields */
+.fclas {
+    background-color: #f1f3f5; /* Light grey background for input */
+    border: 1px solid #ced4da; /* Border around the input */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding-right: 40px; /* Add padding to make space for the icon */
+}
+
+.fclas:focus {
+    outline: none;
+    border-color: #3a3b3b; /* Border color on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Password Wrapper */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Password Toggle Icon */
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.password-toggle-icon:hover {
+    color: #343a40;
+}
+
+/* Forgot password button */
+.frgtclass {
+    background-color: transparent;
+    color: #424141;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.frgtclass:hover {
+    color: #252424; /* Darker blue on hover */
+}
+
+/* Submit button */
+.btncls {
+    background-color: rgb(214, 214, 214);
+    color: #474747;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btncls:hover {
+    background-color: #474747; /* Darker blue on hover */
+    color: #f8f9fa;
+}
+
+.registercls {
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+}
+
+.registercls:hover {
+    color: #474747;
+}
+
+.divreg {
+    margin-top: 5%;
+}
+
+.divbtn {
+    margin-top: 2%;
+}
+
+.h1 {
+    text-align: left;
+}
+
+/* Make the form responsive */
+@media (max-width: 768px) {
+    .login {
+        padding: 20px;
+        margin: 100px auto 0; /* Adjust margin for smaller screens */
+    }
+
+    .fclas {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .btncls {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

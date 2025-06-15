@@ -1,0 +1,59 @@
+/* Container for the 404 page */
+#page-not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 2rem;
+}
+
+/* 404 Heading */
+#page-not-found-heading {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ff4757;
+    margin-bottom: 1rem;
+}
+
+/* Message text */
+#page-not-found-message {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Back Home link */
+#page-not-found-link {
+    font-size: 1.2rem;
+    color: rgb(231, 53, 53);
+    background-color: #ffffff;
+    border-color: rgb(231, 53, 53) ;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the Back Home link */
+#page-not-found-link:hover {
+    background-color: rgb(231, 53, 53);
+    color: #ffffff;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    #page-not-found-heading {
+        font-size: 4rem;
+    }
+
+    #page-not-found-message {
+        font-size: 1.2rem;
+    }
+
+    #page-not-found-link {
+        font-size: 1rem;
+    }
+}

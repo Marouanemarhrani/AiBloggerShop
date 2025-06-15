@@ -23,8 +23,8 @@ const LayoutNF = ({children,title,description,keywords,author}) => {
 };
 
 LayoutNF.defaultProps = {
-  title: "Ecommerce App",
-  description: "Repair shop",
+  title: "AiBloggerShop",
+  description: "Welcome to our shop",
   keywords: "mern,react, express, mongodb",
   author: "Marouane Marhrani",
 };

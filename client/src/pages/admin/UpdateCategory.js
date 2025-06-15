@@ -44,7 +44,7 @@ const UpdateCategory = () => {
                         categoryData
                 );
                 if(data?.success){
-                    toast.error(data?.message);
+                    toast.success(data?.message);
                 }else{
                     toast.success('Category updated successfully');
                     navigate('/dashboard/admin/categories');

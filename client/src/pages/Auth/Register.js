@@ -13,30 +13,33 @@ const Register = () => {
     const [lastname, setLastname] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [phone, setPhone] = useState("");
-    const [address, setAddress] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     const navigate = useNavigate();
 
-    // Toggle password visibility
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
 
-    //form function
+    const toggleConfirmPasswordVisibility = () => {
+        setShowConfirmPassword(!showConfirmPassword);
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (password !== confirmPassword) {
+            toast.error("Passwords do not match");
+            return;
+        }
+
         try {
             const res = await axios.post(
-                `${process.env.REACT_APP_API}/api/users/register`, {
-                firstname,
-                lastname,
-                email,
-                password,
-                phone,
-                address,
-            });
+                `${process.env.REACT_APP_API}/api/users/register`,
+                { firstname, lastname, email, password, confirmPassword }
+              );              
             if (res && res.data.success) {
                 toast.success(res.data.message);
                 navigate('/login');
@@ -54,40 +57,41 @@ const Register = () => {
             <LayoutLogin title="Register">
                 <div className='register'>
                     <form onSubmit={handleSubmit}>
-                        <h1 className='reg-title'>Join us now </h1>
+                        <h1 className='reg-title'>Join us now</h1>
+
                         <div className="regdiv mb-3">
                             <input
                                 type="text"
                                 value={firstname}
                                 onChange={(e) => setFirstname(e.target.value)}
                                 className="reginput form-control"
-                                id="exampleInputName"
                                 placeholder='Firstname'
                                 required
                             />
                         </div>
+
                         <div className="regdiv2 mb-3">
                             <input
                                 type="text"
                                 value={lastname}
                                 onChange={(e) => setLastname(e.target.value)}
                                 className="reginput form-control"
-                                id="exampleInputName"
                                 placeholder='Lastname'
                                 required
                             />
                         </div>
+
                         <div className="regdiv3 mb-3">
                             <input
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="reginput form-control"
-                                id="exampleInputEmail1"
                                 placeholder='Email address'
                                 required
                             />
                         </div>
+
                         <div className="regdiv4 mb-3">
                             <div className="password-wrapper">
                                 <input
@@ -95,7 +99,6 @@ const Register = () => {
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     className="reginput form-control"
-                                    id="exampleInputPassword1"
                                     placeholder='Password'
                                     required
                                 />
@@ -106,34 +109,32 @@ const Register = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="regdiv5 mb-3">
-                            <input
-                                type="text"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                                className="reginput form-control"
-                                id="exampleInputEmail1"
-                                placeholder='Phone number'
-                                required
-                            />
+
+                        <div className="regdiv4 mb-3">
+                            <div className="password-wrapper">
+                                <input
+                                    type={showConfirmPassword ? "text" : "password"}
+                                    value={confirmPassword}
+                                    onChange={(e) => setConfirmPassword(e.target.value)}
+                                    className="reginput form-control"
+                                    placeholder='Confirm Password'
+                                    required
+                                />
+                                {confirmPassword && (
+                                    <span onClick={toggleConfirmPasswordVisibility} className="password-toggle-icon">
+                                        <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
+                                    </span>
+                                )}
+                            </div>
                         </div>
-                        <div className="regdiv6 mb-3">
-                            <input
-                                type="text"
-                                value={address}
-                                onChange={(e) => setAddress(e.target.value)}
-                                className="reginput form-control"
-                                id="exampleInputEmail1"
-                                placeholder='Address'
-                                required
-                            />
-                        </div>
+
                         <button type="submit" className="regbtn btn">
                             Let's go
                         </button>
+
                         <div className='logindiv'>
                             <Link to="/login" className='Logincls'>
-                                Already have an account, Login..
+                                Already have an account? Login..
                             </Link>
                         </div>
                     </form>

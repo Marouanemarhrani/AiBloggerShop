@@ -24,15 +24,7 @@ import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/admin/AdminOrders";
 import CategoriesAdm from "./pages/admin/CategoriesAdm";
 import UpdateCategory from "./pages/admin/UpdateCategory";
-import CreateBrand from "./pages/admin/CreateBrand";
-import Brands from "./pages/admin/Brands";
-import UpdateBrand from "./pages/admin/UpdateBrand";
-import Companies from "./pages/admin/Companies";
-import UpdateCompany from "./pages/admin/UpdateCompany";
-import CreateCompany from "./pages/admin/CreateCompany";
-import CompanyProduct from "./pages/CompanyProduct";
 import ScrollToTop from "./components/ScrollToTop";
-import AdminOffers from "./pages/admin/AdminOffers";
 
 function App() {
   return (
@@ -44,7 +36,6 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/category/:slug" element={<CategoryProduct />} />
-          <Route path="/company/:slug" element={<CompanyProduct />} />
           <Route path="/search" element={<Search />} />
           <Route path="/dashboard" element={<PrivateRoute />}>
             <Route path="user" element={<Dashboard />} />
@@ -54,15 +45,8 @@ function App() {
           <Route path="/dashboard" element={<AdminRoute />}>
             <Route path="admin" element={<AdminDashboard />} />
             <Route path="admin/create-category" element={<CreateCategory />} />
-            <Route path="admin/offers" element={<AdminOffers />} />
             <Route path="admin/category/:slug" element={<UpdateCategory />} />
             <Route path="admin/categories" element={<CategoriesAdm/>} />
-            <Route path="admin/create-company" element={<CreateCompany />} />
-            <Route path="admin/company/:slug" element={<UpdateCompany />} />
-            <Route path="admin/companies" element={<Companies/>} />
-            <Route path="admin/create-brand" element={<CreateBrand />} />
-            <Route path="admin/brand/:slug" element={<UpdateBrand />} />
-            <Route path="admin/brands" element={<Brands/>} />
             <Route path="admin/create-product" element={<CreateProduct />} />
             <Route path="admin/product/:slug" element={<UpdateProduct />} />
             <Route path="admin/products" element={<Products />} />

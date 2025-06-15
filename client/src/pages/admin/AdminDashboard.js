@@ -18,13 +18,13 @@ const AdminDashboard = () => {
             <div className='adm4-card w-75 p-3'>
               <h4 className='adm-h4'>Admin Information</h4>
               <div className='adm5-card-content'>
-                <span className='adm-labelclass'>Admin Full Name :</span>
+                <span className='adm-labelclass'>Full Name :</span>
                 <span className='adm-infoclass'>{auth?.user?.firstname} {auth?.user?.lastname}</span>
 
-                <span className='adm-labelclass'>Admin Email :</span>
+                <span className='adm-labelclass'>Email :</span>
                 <span className='adm-infoclass'>{auth?.user?.email}</span>
 
-                <span className='adm-labelclass'>Admin Phone :</span>
+                <span className='adm-labelclass'>Phone :</span>
                 <span className='adm-infoclass'>{auth?.user?.phone}</span>
               </div>
             </div>

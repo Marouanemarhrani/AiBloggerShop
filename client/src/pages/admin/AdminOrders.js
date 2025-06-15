@@ -11,7 +11,7 @@ import './AdminOrders.css'
 const { Option } = Select;
 
 const AdminOrders = () => {
-    const [status, setStatus] = useState(["Not Process", "Processing", "Shipped", "delivered", "cancel"]);
+    const [status, setStatus] = useState(["Not Process", "Processing", "Done"]);
     const [changeStatus, setChangeStatus] = useState("");
     const [orders, setOrders] = useState([]);
     const [auth, setAuth] = useAuth();

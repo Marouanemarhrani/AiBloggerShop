@@ -1,52 +1,53 @@
+/* === Register Page Styling === */
 .regbody {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Adjust the form position */
+/* Centered Register Box */
 .register {
-    background-color: #f8f9fa; /* White background with transparency */
+    background-color: #f8f9fa;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
-    margin: 50px auto 0; /* Adjust margin to account for header height */
+    margin: 50px auto 0;
     text-align: center;
 }
 
-/* Form title */
+/* Title */
 .register h1 {
-    color: #333; /* Dark text color */
+    color: #333;
     margin-bottom: 20px;
     font-size: 24px;
+    text-align: left;
 }
 
-/* Input fields */
+/* Input Fields */
 .reginput {
-    background-color: #f1f3f5; /* Light grey background for input */
-    border: 1px solid #ced4da; /* Border around the input */
-    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #f1f3f5;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
     padding: 10px;
     font-size: 14px;
     width: 100%;
     margin-bottom: 15px;
     box-sizing: border-box;
-    padding-right: 40px; /* Add padding to make space for the icon */
+    padding-right: 40px;
 }
 
 .reginput:focus {
     outline: none;
-    border-color: #3a3b3b; /* Border color on focus */
+    border-color: #3a3b3b;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Password Wrapper */
+/* Password Field Wrapper */
 .password-wrapper {
     position: relative;
     width: 100%;
 }
 
-/* Password Toggle Icon */
 .password-toggle-icon {
     position: absolute;
     top: 50%;
@@ -60,7 +61,59 @@
     color: #343a40;
 }
 
-/* Submit button */
+/* Password Checklist */
+.password-checklist {
+    text-align: left;
+    font-size: 13px;
+    margin: 10px 0 10px 0;
+    padding-left: 20px;
+}
+
+.password-checklist li {
+    list-style: none;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.password-checklist li.valid {
+    color: #28a745; /* Green */
+    font-weight: 500;
+}
+
+.password-checklist li.invalid {
+    color: #dc3545; /* Red */
+    font-weight: 500;
+}
+
+.password-checklist li strong {
+    font-weight: 600;
+}
+
+.password-checklist li::before {
+    display: inline-block;
+    width: 16px;
+    margin-right: 6px;
+    content: "✓";
+    color: #28a745;
+}
+
+.password-checklist li.invalid::before {
+    content: "✕";
+    color: #dc3545;
+}
+
+/* Error Message for Password Mismatch */
+.error-text {
+    color: #dc3545;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/* Submit Button */
 .regbtn {
     background-color: rgb(214, 214, 214);
     color: #474747;
@@ -74,10 +127,11 @@
 }
 
 .regbtn:hover {
-    background-color: #474747; /* Darker blue on hover */
+    background-color: #474747;
     color: #f8f9fa;
 }
 
+/* Login Link */
 .Logincls {
     text-decoration: none;
     color: rgb(89, 89, 89);
@@ -95,11 +149,11 @@
     text-align: left;
 }
 
-/* Make the form responsive */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .register {
         padding: 20px;
-        margin: 100px auto 0; /* Adjust margin for smaller screens */
+        margin: 100px auto 0;
     }
 
     .reginput {

@@ -16,39 +16,56 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [errorMatch, setErrorMatch] = useState(false);
 
     const navigate = useNavigate();
 
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
+    const togglePasswordVisibility = () => setShowPassword(!showPassword);
+    const toggleConfirmPasswordVisibility = () => setShowConfirmPassword(!showConfirmPassword);
+
+    const validatePassword = (value) => {
+        return {
+            lowercase: /[a-z]/.test(value),
+            uppercase: /[A-Z]/.test(value),
+            number: /\d/.test(value),
+            specialChar: /[!@#$%^&*()_\-+=]/.test(value),
+            length: value.length >= 8
+        };
     };
 
-    const toggleConfirmPasswordVisibility = () => {
-        setShowConfirmPassword(!showConfirmPassword);
-    };
+    const rules = validatePassword(password);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (password !== confirmPassword) {
-            toast.error("Passwords do not match");
+            setErrorMatch(true);
             return;
         }
+        setErrorMatch(false);
 
         try {
-            const res = await axios.post(
-                `${process.env.REACT_APP_API}/api/users/register`,
-                { firstname, lastname, email, password, confirmPassword }
-              );              
+            const res = await axios.post(`${process.env.REACT_APP_API}/api/users/register`, {
+                firstname,
+                lastname,
+                email,
+                password,
+                confirmPassword
+            });
+
             if (res && res.data.success) {
                 toast.success(res.data.message);
                 navigate('/login');
             } else {
-                toast.error(res.data.message);
+                toast.error(res.data.message || "Registration failed.");
             }
         } catch (error) {
-            console.log(error);
-            toast.error('Something went wrong');
+            const serverMessage = error?.response?.data?.message;
+            if (serverMessage) {
+                toast.error(serverMessage);
+            } else {
+                toast.error("An unexpected error occurred. Please try again.");
+            }
         }
     };
 
@@ -92,7 +109,7 @@ const Register = () => {
                             />
                         </div>
 
-                        <div className="regdiv4 mb-3">
+                        <div className="regdiv4 mb-2">
                             <div className="password-wrapper">
                                 <input
                                     type={showPassword ? "text" : "password"}
@@ -102,16 +119,31 @@ const Register = () => {
                                     placeholder='Password'
                                     required
                                 />
-                                {password && (
-                                    <span onClick={togglePasswordVisibility} className="password-toggle-icon">
-                                        <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
-                                    </span>
-                                )}
+                                <span className="password-toggle-icon" onClick={togglePasswordVisibility}>
+                                    <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+                                </span>
                             </div>
+                            <ul className="password-checklist">
+                                <li className={rules.lowercase ? 'valid' : 'invalid'}>
+                                A lowercase letter
+                                </li>
+                                <li className={rules.uppercase ? 'valid' : 'invalid'}>
+                                A capital (uppercase) letter
+                                </li>
+                                <li className={rules.number ? 'valid' : 'invalid'}>
+                                A number
+                                </li>
+                                <li className={rules.specialChar ? 'valid' : 'invalid'}>
+                                A special character (&%$!_-)
+                                </li>
+                                <li className={rules.length ? 'valid' : 'invalid'}>
+                                Minimum 8 characters
+                                </li>
+                            </ul>
                         </div>
 
                         <div className="regdiv4 mb-3">
-                            <div className="password-wrapper">
+                            <div className={`password-wrapper ${errorMatch ? 'invalid' : ''}`}>
                                 <input
                                     type={showConfirmPassword ? "text" : "password"}
                                     value={confirmPassword}
@@ -120,12 +152,13 @@ const Register = () => {
                                     placeholder='Confirm Password'
                                     required
                                 />
-                                {confirmPassword && (
-                                    <span onClick={toggleConfirmPasswordVisibility} className="password-toggle-icon">
-                                        <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
-                                    </span>
-                                )}
+                                <span className="password-toggle-icon" onClick={toggleConfirmPasswordVisibility}>
+                                    <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
+                                </span>
                             </div>
+                            {errorMatch && (
+                                <div className="error-text">Password and Confirm Password must match.</div>
+                            )}
                         </div>
 
                         <button type="submit" className="regbtn btn">

@@ -20,14 +20,8 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
-        validate: {
-            validator: function (value) {
-                return /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/.test(value);
-            },
-            message: 'Password must include uppercase, lowercase, number, and special character.'
-        }
-    },
+        required: true
+      },
     phone: {
         type: String,
         trim: true,
